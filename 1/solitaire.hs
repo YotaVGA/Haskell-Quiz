@@ -24,7 +24,7 @@ import Data.STRef
 import Data.Array.ST
 import qualified Control.Monad.ST.Unsafe as STU
 
-data Card = Card {card :: Int} | Joker {joker :: Int} deriving Eq
+data Card = Card Int | Joker Int deriving Eq
 
 instance Show Card where
   show (Card c) = [chr (number + symbol * 16 + 0x1F0A0)]
